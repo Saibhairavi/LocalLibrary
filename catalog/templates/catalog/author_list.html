@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<head>
+    <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+    </head>
+
+{% block content %}
+
+<div class="container"> 
+
+<table border='1'   style="width:100%">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th> 
+      <th>Birth date</th>
+      <th>Death</th>
+    </tr>
+    {% for author in author_list  %}
+    <tr>
+        <td>{{ author.first_name }}</td>
+        <td>{{ author.last_name }}</td>
+        <td>{{ author.date_of_birth }}</td>
+        <td>{{ author.date_of_death }}</td>
+      </tr>
+
+ 
+    {% endfor %}
+    </table>
+
+        
+</div>
+
+
+{% endblock %}
