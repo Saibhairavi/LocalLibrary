@@ -1,0 +1,2 @@
+# LocalLibrary
+Django web application
