@@ -32,6 +32,7 @@ def logout_request(request):
     messages.info(request, "Logged out successfully!")
     return redirect("login")
 
+@login_required
 def index(request):
     num_books=Book.objects.all().count()
     num_instances=BookInstance.objects.all().count()
